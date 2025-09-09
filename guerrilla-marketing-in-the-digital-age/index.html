@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrilla Marketing in the Digital Age - Elvariente Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lora:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Inline CSS (Same as homepage for consistency) -->
+    <style>
+        :root {
+          --primary-accent: #6E0F1F;
+          --secondary-accent: #B22222;
+          --gold-bg-text: #D4AF37;
+          --text-on-light: #0B0B0B;
+          --paper-bg: #FDFDFD;
+          --neutral-divider: #837060;
+          --glass-light: rgba(247, 231, 206, 0.25);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+          background-color: var(--paper-bg);
+          color: var(--text-on-light);
+          font-family: 'Lora', serif;
+          line-height: 1.8;
+          min-height: 100vh;
+          position: relative;
+        }
+
+        h1, h2, h3, .tag, .button, .filter-button {
+          font-family: 'Cormorant Garamond', serif;
+          letter-spacing: 0.5px;
+        }
+
+        .glass {
+          background: var(--glass-light);
+          backdrop-filter: blur(6px);
+          border: 1px solid var(--neutral-divider);
+          border-radius: 4px;
+        }
+
+        header.glass {
+          position: sticky;
+          top: 0;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          padding: 0 4rem;
+          border-bottom: 1px solid var(--neutral-divider);
+          z-index: 1000;
+          width: 100%;
+        }
+
+        header .logo {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--primary-accent);
+        }
+
+        header nav {
+          display: flex;
+          gap: 1.5rem;
+          margin-left: auto;
+        }
+
+        header nav a {
+          color: var(--text-on-light);
+          text-decoration: none;
+          font-family: 'Lora', serif;
+        }
+
+        header nav a:hover { color: var(--primary-accent); }
+
+        main {
+          padding: 5rem 8rem;
+          position: relative;
+          z-index: 10;
+        }
+
+        .post-header {
+          margin-bottom: 2rem;
+        }
+
+        .post-header h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .post-image {
+          width: 100%;
+          height: auto;
+          border-radius: 4px;
+          margin-bottom: 2rem;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .post-image::after {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: linear-gradient(to bottom, transparent 60%, var(--glass-light));
+          pointer-events: none;
+          opacity: 0.3;
+        }
+
+        .post-content {
+          max-width: 800px;
+        }
+
+        .post-content p {
+          margin-bottom: 1.5rem;
+        }
+
+        .post-content h2 {
+          font-size: 1.8rem;
+          margin: 2rem 0 1rem;
+        }
+
+        footer.glass {
+          background: var(--glass-light);
+          padding: 3rem 4rem;
+          text-align: center;
+          font-family: 'Lora', serif;
+          font-size: 0.9rem;
+          color: var(--text-on-light);
+          border-top: 1px solid var(--neutral-divider);
+          margin-top: 6rem;
+          position: relative;
+          z-index: 10;
+          width: 100%;
+        }
+
+        footer .footer-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        footer .logo {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--primary-accent);
+        }
+
+        footer .social-icons {
+          display: flex;
+          gap: 1rem;
+        }
+
+        footer .social-icons a {
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+
+        footer .social-icons img {
+          width: 100%; height: 100%;
+        }
+
+        footer .quick-links a {
+          color: var(--text-on-light);
+          margin: 0 0.5rem;
+          text-decoration: none;
+        }
+
+        footer .quick-links a:hover { color: var(--primary-accent); }
+
+        footer .copyright {
+          margin-top: 2rem;
+          font-size: 0.85rem;
+          width: 100%;
+        }
+
+        #particles-js {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0; left: 0;
+          z-index: 0;
+        }
+
+        a { color: var(--primary-accent); }
+        a:hover { color: var(--secondary-accent); }
+    </style>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <!-- Header -->
+   <header class="glass">
+     <nav style="display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 4rem; width: 100%;">
+       <div class="logo" style="font-size: 1.5rem; font-weight: 700; color: var(--primary-accent);">ELVARIENTE</div>
+       <div class="nav-links" style="display: flex; gap: 1.5rem;">
+         <a href="/" style="color: var(--text-on-light); text-decoration: none;">Home</a>
+         <a href="https://elvariente.com/about" style="color: var(--text-on-light); text-decoration: none;">About</a>
+         <a href="https://elvariente.com/services" style="color: var(--text-on-light); text-decoration: none;">Services</a>
+         <a href="https://elvariente.com/case-studies" style="color: var(--text-on-light); text-decoration: none;">Case Studies</a>
+         <a href="https://elvariente.com/lab" style="color: var(--text-on-light); text-decoration: none;">Lab</a>
+         <a href="https://elvariente.com/contact" style="color: var(--text-on-light); text-decoration: none;">Contact</a>
+       </div>
+     </nav>
+   </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Editable Post Header -->
+        <div class="post-header">
+            <h1>Guerrilla Marketing in the Digital Age</h1>
+            <p>Published on <time datetime="2024-05-21">May 21, 2024</time></p>
+        </div>
+
+        <!-- Editable Post Image (Optional) -->
+        <img src="/images/guerrilla-digital.jpg" alt="Digital Guerrilla" class="post-image glass">
+
+        <!-- Editable Post Content -->
+        <div class="post-content">
+            <p>In a world saturated with traditional advertising, capturing genuine audience attention requires a bold, unconventional approach. Guerrilla marketing, with its emphasis on creativity, surprise, and low cost for high impact, has found a powerful new frontier in the digital realm. It's no longer just about street art or flash mobs; it's about crafting unforgettable digital experiences that organically spread through communities and social networks.</p>
+
+            <h2>AR Scavenger Hunts: Gamifying Discovery</h2>
+            <p>One of the most innovative digital guerrilla tactics is the <strong>Augmented Reality (AR) Scavenger Hunt</strong>. This strategy transforms the physical world into an interactive playground. By developing a custom mobile app, brands can overlay virtual clues, characters, or products onto real locations. Participants, armed with their smartphones, embark on a city-wide quest. The thrill of the hunt, combined with the novelty of AR technology, creates inherently shareable moments. Users naturally document and share their finds on social media, acting as brand ambassadors and amplifying reach exponentially. The key is designing compelling rewards and integrating the hunt seamlessly with the brand narrative.</p>
+
+            <h2>Pop-Up VR Experiences: Immersive Storytelling</h2>
+            <p>Another potent tool is the <strong>Pop-Up Brand Immersive Experience</strong>, often enhanced with <strong>Virtual Reality (VR)</strong>. Unlike static pop-ups, these are fully realized digital environments. A travel company might offer a VR booth that instantly transports users to a tropical beach. A car brand could let potential buyers experience a test drive of a new model in a virtual racetrack. These experiences are hyper-personalized and memorable. Their uniqueness makes them highly desirable content for social sharing, generating significant organic buzz. The ephemeral nature of a pop-up also adds a sense of urgency and exclusivity.</p>
+
+            <h2>Interactive Social Challenges: Viral by Design</h2>
+            <p><strong>Interactive Social Media Challenges</strong> have become a dominant force. The most successful ones go beyond simple participation; they are designed to be creative and visually striking. A unique hook—perhaps a distinctive dance move, a catchy soundbite, or a clever visual filter—is essential. However, launching a challenge is only the beginning. Agencies must strategically seed the challenge with influencers and early adopters to build initial momentum. Framing the challenge within a broader narrative or for a social cause gives it deeper meaning, encouraging sustained participation and genuine connection. This fusion of entertainment, creativity, and purpose creates a powerful, self-propelling marketing engine.</p>
+
+            <h2>The Core Principle: Facilitating Experience</h2>
+            <p>The underlying principle of modern guerrilla marketing is a shift from broadcasting a message to facilitating an engaging experience. The most impactful campaigns empower the audience to become co-creators of the brand story. By leveraging cutting-edge technologies like AR and VR, and by designing interactions that tap into human creativity and the desire for social connection, an agency can orchestrate marketing events that transcend traditional advertising. They generate authentic excitement, foster community, and leave a lasting, positive impression that drives long-term brand loyalty.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass" style="background: var(--glass-light); backdrop-filter: blur(6px); border-top: 1px solid var(--neutral-divider); padding: 3rem 2rem; margin-top: 6rem; position: relative; z-index: 10; color: var(--text-on-light); font-family: 'Lora', serif; font-size: 0.9rem;">
+    <div class="container">
+      <div class="row" style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+        <!-- Brand Column -->
+        <div class="col-md-3" style="flex: 0 0 25%; max-width: 25%;">
+          <div class="logo" style="font-size: 1.5rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 1rem;">ELVARIENTE</div>
+          <p style="margin-bottom: 1rem;">
+            The First-Mover Growth Architect. Deploying Tomorrow's Tech Today.
+          </p>
+        </div>
+
+        <!-- Pages Column -->
+        <div class="col-md-2" style="flex: 0 0 16.666667%; max-width: 16.666667%;">
+          <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.5px; margin-bottom: 1rem;">Pages</h6>
+          <ul style="list-style-type: none; padding: 0;">
+            <li><a href="/" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Home</a></li>
+            <li><a href="https://elvariente.com/about" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">About</a></li>
+            <li><a href="https://elvariente.com/services" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Services</a></li>
+            <li><a href="https://elvariente.com/case-studies" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Case Studies</a></li>
+            <li><a href="https://elvariente.com/lab" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Lab</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Alternatives Column -->
+        <div class="col-md-2" style="flex: 0 0 16.666667%; max-width: 16.666667%;">
+          <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.5px; margin-bottom: 1rem;">Support</h6>
+          <ul style="list-style-type: none; padding: 0;">
+            <li><a href="https://elvariente.com/privacy-policy" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="https://elvariente.com/terms-of-service" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Terms of Service</a></li>
+            <li><a href="https://elvariente.com/feedback" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="col-md-2" style="flex: 0 0 16.666667%; max-width: 16.666667%;">
+          <h6 class="text-uppercase mb-4 font-weight-bold" style="font-family: 'Cormorant Garamond', serif; letter-spacing: 0.5px; margin-bottom: 1rem;">Contact</h6>
+          <p style="margin-bottom: 0.5rem;"><a href="mailto:contact@elvariente.com" class="text-white" style="color: var(--text-on-light) !important; text-decoration: none;">contact@elvariente.com</a></p>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+            <!-- Real Social Media Logos -->
+            <a href="https://www.linkedin.com/in/elvariente" target="_blank" rel="noopener">
+            <img src="../logos/linkedin.svg" alt="LinkedIn" width="20" height="20">
+            </a>
+            <a href="https://twitter.com/elvariente" target="_blank" rel="noopener">
+            <img src="../logos/twitter.svg" alt="Twitter" width="20" height="20">
+            </a>
+            <a href="https://instagram.com/elvariente" target="_blank" rel="noopener">
+            <img src="../logos/instagram.svg" alt="GitHub" width="20" height="20">
+            </a>
+            <a href="https://tiktok.com/@elvariente" target="_blank" rel="noopener">
+            <img src="../logos/tiktok.svg" alt="GitHub" width="20" height="20">
+            </a>
+            <a href="https://github.com/elvariente" target="_blank" rel="noopener">
+            <img src="../logos/github.svg" alt="GitHub" width="20" height="20">
+            </a>
+            <a href="https://www.facebook.com/elvariente" target="_blank" rel="noopener">
+            <img src="../logos/facebook.svg" alt="GitHub" width="20" height="20">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright - Positioned at the very bottom of the page -->
+    <div class="text-center p-3" style="background-color: rgba(131, 112, 96, 0.1); border-top: 1px solid var(--neutral-divider); margin-top: 2rem; padding: 1rem; color: var(--text-on-light); font-size: 0.85rem;">
+      © 2025 Elvariente. All rights reserved.
+    </div>
+  </footer>
+
+    <!-- Particles Config -->
+    <script>
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 60 },
+                    color: { value: "#B22222" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.2 },
+                    size: { value: 3 },
+                    move: {
+                        enable: true, speed: 1, direction: "none",
+                        random: true, straight: false, out_mode: "out", bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
